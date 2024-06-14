@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Home from "./components/Home/Home";
+import CheckOut from "./pages/CheckOut/CheckOut";
+import ProductDetails from "./pages/Products/ProductDetails";
+import Products from "./pages/Products/Products";
+
+const stripePromise = loadStripe(process.env.REACT_APP_StripePKTest);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Elements stripe={stripePromise}>
+      <Routes>
+        <Route path="/" element={<Home />}>
+          <Route path="/" element={<Products />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/checkout" element={<CheckOut />} />
+          <Route
+            path="/products/:productId/details"
+            element={<ProductDetails />}
+          />
+        </Route>
+      </Routes>
+    </Elements>
   );
 }
 
