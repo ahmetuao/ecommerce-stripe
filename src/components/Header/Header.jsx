@@ -65,7 +65,7 @@ function Header() {
           >
             <img
               onClick={() => navigate("/")}
-              // src={LogoImg}
+              src={LogoImg}
               alt="logo"
               width={100}
             />
@@ -131,7 +131,7 @@ function Header() {
           >
             <img
               onClick={() => navigate("/")}
-              // src={LogoImg}
+              src={LogoImg}
               alt="logo"
               style={{ width: "100%" }}
             />
