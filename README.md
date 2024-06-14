@@ -1,3 +1,20 @@
+## .ENV
+Stripe Keys and BookData API Keys are located in .env file.
+
+## PREVIEW LINK
+The project preview can be viewed via the link below;
+### https://codexist.netlify.app/
+
+## DESIGN
+Material UI library was used for "responsive" project styling and.
+
+## API
+A free API via RapidAPI was used for the Book Store API.
+### https://rapidapi.com/yoginoit39/api/all-books-api
+
+## PAYMENT
+Stipe has been used for fake payment system.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
