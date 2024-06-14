@@ -95,7 +95,7 @@ const CheckOut = () => {
         },
         {
           headers: {
-            Authorization: `Bearer ${process.env.REACT_APP_StripeSKTest}`,
+            Authorization: process.env.REACT_APP_StripeSKTest,
             "Content-Type": "application/x-www-form-urlencoded",
           },
         }
